@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE7C375E-6169-41CE-9959-46597BDAE9C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JiraReports</RootNamespace>
+    <AssemblyName>JiraReports</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Loop\Jira\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>Affinitiv</PublisherName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Public|AnyCPU'">
+    <OutputPath>bin\Public\</OutputPath>
+    <DefineConstants>Public</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C9BE2A7B6F549AAF88268DD2018E248E4B687A74</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Marketing|AnyCPU'">
+    <OutputPath>bin\Marketing\</OutputPath>
+    <DefineConstants>Marketing</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\packages\Microsoft.Xaml.Behaviors.Wpf.1.0.1\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\ClippingBorder.cs" />
+    <Compile Include="Common\CustomPasswordBox.xaml.cs">
+      <DependentUpon>CustomPasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExcelTypeWriter.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\FocusBehavior.cs" />
+    <Compile Include="Common\HttpUtilities.cs" />
+    <Compile Include="Common\IHttpUtility.cs" />
+    <Compile Include="Common\JiraConstants.cs" />
+    <Compile Include="Common\LinqExtensions.cs" />
+    <Compile Include="Common\MouseDecorator.cs" />
+    <Compile Include="Common\PropertyManager.cs" />
+    <Compile Include="Common\JiraFieldsSprintConverter.cs" />
+    <Compile Include="Common\UnixLongDateTimeConverter.cs" />
+    <Compile Include="Reports\CapEx\CapExReport.cs" />
+    <Compile Include="Reports\CapEx\CapExReportData.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\AvailableResource.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\SprintStatsCalculator.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\SprintStatsIssue.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\TeamSprintStatsView.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\FailureRateIssue.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\TeamSprintStats.cs" />
+    <Compile Include="Reports\Common\EffectiveValue\ViewModel\SprintStatsIssueView.cs" />
+    <Compile Include="Reports\IGraphAxis.cs" />
+    <Compile Include="Reports\IGraphDataPoint.cs" />
+    <Compile Include="Reports\IGraphReport.cs" />
+    <Compile Include="Reports\IGraphReportResponse.cs" />
+    <Compile Include="Reports\IGridReport.cs" />
+    <Compile Include="Reports\IReport.cs" />
+    <Compile Include="Reports\KeyPoints\KeyPointsReport.cs" />
+    <Compile Include="Reports\KeyPoints\Predictability\PredictabilityBreakdown.cs" />
+    <Compile Include="Reports\KeyPoints\Predictability\PredictabilityData.cs" />
+    <Compile Include="Reports\KeyPoints\Predictability\PredictabilityTeams.cs" />
+    <Compile Include="Reports\KeyPoints\Productivity\ProductivitySprintTotals.cs" />
+    <Compile Include="Reports\KeyPoints\Productivity\ProductivityTeamTotals.cs" />
+    <Compile Include="Reports\KeyPoints\Productivity\ProjectSprintPersonTotals.cs" />
+    <Compile Include="Reports\KeyPoints\ViewModel\KeyPointsSprintTotals.cs" />
+    <Compile Include="Reports\NoEngNotes\NoEngNotesReport.cs" />
+    <Compile Include="Reports\NoEngNotes\NoNotesByEngineerDataItem.cs" />
+    <Compile Include="Reports\NoEngNotes\NoNotesBySprintDataItem.cs" />
+    <Compile Include="Reports\NoEngNotes\AllEngNotesForQADataItem.cs" />
+    <Compile Include="Reports\NoEngNotes\NoNotesSummaryDataItem.cs" />
+    <Compile Include="Reports\ReportDisplayViewAttribute.cs" />
+    <Compile Include="Reports\ReportOptionsViewAttribute.cs" />
+    <Compile Include="Reports\SprintHealth\SprintHealthDates.cs" />
+    <Compile Include="Reports\SprintHealth\SprintHealthIssue.cs" />
+    <Compile Include="Reports\SprintHealth\SprintHealthPersonalStats.cs" />
+    <Compile Include="Reports\SprintHealth\SprintHealthReport.cs" />
+    <Compile Include="Reports\SprintHealth\SprintHealthHourTotals.cs" />
+    <Compile Include="Reports\TimeTracking\TimeTrackingReport.cs" />
+    <Compile Include="Reports\TimeTracking\TimeTrackingReportData.cs" />
+    <Compile Include="Reports\TimeTracking\TimeTrackingReportHoursSummaryData.cs" />
+    <Compile Include="Services\HolidayService.cs" />
+    <Compile Include="Services\IHolidayService.cs" />
+    <Compile Include="Services\Interfaces\ISprintService.cs" />
+    <Compile Include="Services\IPersonnelService.cs" />
+    <Compile Include="Services\IServiceLocator.cs" />
+    <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\InstancePerRequestAttribute.cs" />
+    <Compile Include="Services\IOCAttribute.cs" />
+    <Compile Include="Services\IEffectiveWorkingDaysService.cs" />
+    <Compile Include="Services\ISprintPointValueService.cs" />
+    <Compile Include="Services\Model\JiraIssueBucket.cs" />
+    <Compile Include="Services\SprintPointValueService.cs" />
+    <Compile Include="Services\Jira\IJiraAgileService.cs" />
+    <Compile Include="Services\Jira\IJiraGitService.cs" />
+    <Compile Include="Services\Jira\IJiraIssueService.cs" />
+    <Compile Include="Services\Jira\IJiraIssueTypeService.cs" />
+    <Compile Include="Services\Jira\IJiraProjectService.cs" />
+    <Compile Include="Services\Jira\IJiraUserService.cs" />
+    <Compile Include="Services\Jira\IJiraWorklogService.cs" />
+    <Compile Include="Services\Jira\JiraAgileService.cs" />
+    <Compile Include="Services\Jira\JiraGitService.cs" />
+    <Compile Include="Services\Jira\Model\AgileBoard.cs" />
+    <Compile Include="Services\Jira\Model\AgileServiceResult.cs" />
+    <Compile Include="Services\Jira\Model\AgileSprint.cs" />
+    <Compile Include="Services\Jira\Model\GitCommit.cs" />
+    <Compile Include="Services\Jira\Model\GitCommitResponse.cs" />
+    <Compile Include="Services\Jira\Model\GitRepository.cs" />
+    <Compile Include="Services\Jira\Model\ItemList.cs" />
+    <Compile Include="Services\Jira\Model\JiraApplicationRole.cs" />
+    <Compile Include="Services\Jira\Model\JiraChangelogItemDetails.cs" />
+    <Compile Include="Services\Jira\Model\JiraCustomFieldValue.cs" />
+    <Compile Include="Services\Jira\Model\JiraEpicField.cs" />
+    <Compile Include="Services\Jira\Model\JiraEpicFieldSummary.cs" />
+    <Compile Include="Services\Jira\Model\JiraFields.cs" />
+    <Compile Include="Services\Jira\Model\JiraFieldsConverter.cs" />
+    <Compile Include="Services\Jira\Model\JiraFixVersion.cs" />
+    <Compile Include="Services\Jira\Model\JiraGroup.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssue.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueChangelog.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueChangelogItem.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueComponent.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueIncomplete.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueLink.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueLinkType.cs" />
+    <Compile Include="Services\Jira\JiraIssueService.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueResolution.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueStatus.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueStatusCategory.cs" />
+    <Compile Include="Services\Jira\Model\JiraIssueType.cs" />
+    <Compile Include="Services\Jira\Model\JiraPriority.cs" />
+    <Compile Include="Services\Jira\Model\JiraProject.cs" />
+    <Compile Include="Services\Jira\Model\JiraProjectCategory.cs" />
+    <Compile Include="Services\Jira\Model\JiraSearchResult.cs" />
+    <Compile Include="Services\Jira\Model\JiraTimeTrackingData.cs" />
+    <Compile Include="Services\Jira\Model\JiraUserBasic.cs" />
+    <Compile Include="Services\Jira\JiraProjectService.cs" />
+    <Compile Include="Services\Jira\Model\JiraWorklog.cs" />
+    <Compile Include="Services\Jira\JiraWorklogService.cs" />
+    <Compile Include="Services\Jira\Model\JiraNotAuthorizedException.cs" />
+    <Compile Include="Services\Jira\Model\JiraService.cs" />
+    <Compile Include="Services\Jira\Model\JiraUser.cs" />
+    <Compile Include="Services\Jira\JiraIssueTypeService.cs" />
+    <Compile Include="Services\Jira\JiraUserService.cs" />
+    <Compile Include="Services\Jira\Model\JiraWorklogList.cs" />
+    <Compile Include="Services\Model\SprintParameters.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\Office.cs" />
+    <Compile Include="Services\OfficeHoliday.cs" />
+    <Compile Include="Services\PersonnelService.cs" />
+    <Compile Include="Services\PersonRole.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+    <Compile Include="Services\SingleInstanceAttribute.cs" />
+    <Compile Include="Services\SingleInstancePerScopeAttribute.cs" />
+    <Compile Include="Services\SprintService.cs" />
+    <Compile Include="Services\Web\BasicAuthentication.cs" />
+    <Compile Include="Services\Web\IWebAuthentication.cs" />
+    <Compile Include="Services\Web\IWebClient.cs" />
+    <Compile Include="Services\Web\IWebClientResponse.cs" />
+    <Compile Include="Services\Web\WebClient.cs" />
+    <Compile Include="Services\Web\WebClientResponse.cs" />
+    <Compile Include="Services\EffectiveWorkingDaysService.cs" />
+    <Compile Include="Theme.xaml.cs" />
+    <Compile Include="ViewModel\Index\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\Login\LoginViewModel.cs" />
+    <Compile Include="ViewModel\ReportPage\ReportPageViewModel.cs" />
+    <Compile Include="ViewModel\ReportPage\ReportTypeViewModel.cs" />
+    <Compile Include="ViewModel\ReportPage\ReportViewModel.cs" />
+    <Compile Include="ViewModel\Reports\BlankOptionsViewModel.cs" />
+    <Compile Include="ViewModel\Reports\CapEx\CapExGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\CapEx\CapExOptionsViewModel.cs" />
+    <Compile Include="ViewModel\Reports\KeyPoints\KeyPointsGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\KeyPoints\KeyPointsOptionsViewModel.cs" />
+    <Compile Include="ViewModel\Reports\MultiGridItemViewModel.cs" />
+    <Compile Include="ViewModel\Reports\MultiGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\GridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\IReportProgress.cs" />
+    <Compile Include="ViewModel\Reports\NoEngNotes\NoEngNotesGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\ReportDisplayModel.cs" />
+    <Compile Include="ViewModel\Reports\ReportOptionsModel.cs" />
+    <Compile Include="ViewModel\Reports\SprintHealth\SprintHealthGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\SprintHealth\SprintHealthOptionsViewModel.cs" />
+    <Compile Include="ViewModel\Reports\SprintPointValue\SprintPointValueGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\TimeTracking\SelectableProjectCategory.cs" />
+    <Compile Include="ViewModel\Reports\TimeTracking\TimeTrackingGridViewModel.cs" />
+    <Compile Include="ViewModel\Reports\TimeTracking\TimeTrackingOptionsViewModel.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelCommand.cs" />
+    <Compile Include="View\Login\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportPage\ReportPage.xaml.cs">
+      <DependentUpon>ReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\BlankOptionsView.xaml.cs">
+      <DependentUpon>BlankOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\CapEx\CapExOptionsView.xaml.cs">
+      <DependentUpon>CapExOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\KeyPoints\KeyPointsOptionsView.xaml.cs">
+      <DependentUpon>KeyPointsOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\KeyPoints\KeyPointsMultiGridView.xaml.cs">
+      <DependentUpon>KeyPointsMultiGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\ReportMultiGridView.xaml.cs">
+      <DependentUpon>ReportMultiGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\ReportGridView.xaml.cs">
+      <DependentUpon>ReportGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\SprintHealth\SprintHealthOptionsView.xaml.cs">
+      <DependentUpon>SprintHealthOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\TimeTracking\TimeTrackingOptionsView.xaml.cs">
+      <DependentUpon>TimeTrackingOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewAttribute.cs" />
+    <Compile Include="View\ViewAttributeBase.cs" />
+    <Compile Include="View\ViewContainerAttribute.cs" />
+    <Page Include="Common\CustomPasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Login\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReportPage\ReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Reports\BlankOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Reports\CapEx\CapExOptionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Reports\KeyPoints\KeyPointsOptionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Reports\KeyPoints\KeyPointsMultiGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Reports\ReportMultiGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Reports\ReportGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Reports\SprintHealth\SprintHealthOptionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Reports\TimeTracking\TimeTrackingOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="JiraReports_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Reports\KeyPoints\Files\KPITemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
